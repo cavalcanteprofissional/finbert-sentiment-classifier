@@ -11,6 +11,23 @@ Fine-tuning de BERT para classificação de sentimento em textos financeiros com
 | **Recall** | 31.6% | 87.3% | +176% |
 | **F1-Score** | 29.4% | 87.3% | +196% |
 
+### 📈 Visualização das Métricas
+
+#### 1. Gráfico de Barras Comparativas
+![Barras Comparativas](./metricas_comparacao_barras.png)
+
+#### 2. Evolução das Métricas (Linhas)
+![Evolução em Linhas](./metricas_evolucao_linhas.png)
+
+#### 3. Evolução por Métrica (Área Preenchida)
+![Área Preenchida](./metricas_area_preenchida.png)
+
+#### 4. Tabela de Métricas
+![Tabela com Heatmap](./metricas_tabela_heatmap.png)
+
+#### 5. Dashboard Completo
+![Dashboard Completo](./metricas_dashboard_completo.png)
+
 ## 🎯 Objetivo
 
 Demonstrar o processo completo de **Transfer Learning** com BERT para classificação de sentimento no domínio financeiro, utilizando o modelo pré-treinado da Hugging Face.
