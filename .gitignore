@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Modelos treinados (muito grandes para o repo)
+modelo_financial_finetuned/
+sentiment_model_financial_finetuned/
+initial_results_financial/
+eval_only/
+
+# Ambiente virtual
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
