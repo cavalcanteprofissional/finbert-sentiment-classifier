@@ -39,6 +39,7 @@ Demonstrar o processo completo de **Transfer Learning** com BERT para classifica
 - **BERT Multilingual** (`nlptown/bert-base-multilingual-uncased-sentiment`)
 - **Scikit-learn** para métricas de avaliação
 - **Matplotlib** para visualização
+- **Detecção automática de GPU** com fallback para CPU (`torch.cuda.is_available()`)
 
 ## 📁 Estrutura do Projeto
 
@@ -126,7 +127,9 @@ python export_metrics.py
 
 2. **Sem Cross-Validation**: O modelo utiliza apenas hold-out validation (divisão única em treino/validação/teste), sem K-Fold Cross-Validation para validação mais robusta.
 
-3. **Tempo de treinamento**: Apenas 1 época para fins acadêmicos (para demonstrar o conceito).
+3. **Sem paralelização avançada**: Embora o código já conte com detecção automática de GPU (com fallback para CPU), não há implementação de DataLoader com num_workers, training distribuído (DDP) ou mixed precision (FP16).
+
+4. **Tempo de treinamento**: Apenas 1 época para fins acadêmicos (para demonstrar o conceito).
 
 ## 💡 Possíveis Melhorias
 
@@ -145,6 +148,13 @@ python export_metrics.py
 - Experimentar com outros modelos (RoBERTa, DeBERTa, FinBERT)
 - Implementar ensemble de modelos
 - Adicionar mais camadas de fine-tuning (freezing gradual)
+
+### Infraestrutura e Performance
+- Implementar DataLoader com `num_workers` para paralelização de carregamento de dados
+- Utilizar a biblioteca `accelerate` da Hugging Face para treinamento distribuído
+- Configurar DistributedDataParallel (DDP) para múltiplas GPUs
+- Implementar Mixed Precision Training (FP16) para acelerar o treinamento e reduzir uso de memória
+- Habilitar gradient accumulation para simular batch sizes maiores
 
 ## 📚 Referências
 
