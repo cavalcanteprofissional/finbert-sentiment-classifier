@@ -120,18 +120,31 @@ pip install matplotlib pandas numpy seaborn
 python export_metrics.py
 ```
 
-## ⚠️ Limitaciones
+## ⚠️ Limitações Atuais
 
-- **Desequilíbrio de classes**: O pipeline não implementa técnicas de balanceamento (class weights, oversampling). O dataset é desbalanceado (positive: 38%, moderately negative: 3%).
-- **Tempo de treinamento**: Apenas 1 época para fins acadêmicos (para demonstrar o conceito).
+1. **Desequilíbrio de classes**: O pipeline não implementa técnicas de balanceamento (class weights, oversampling). O dataset é desbalanceado (positive: 38%, moderately negative: 3%).
+
+2. **Sem Cross-Validation**: O modelo utiliza apenas hold-out validation (divisão única em treino/validação/teste), sem K-Fold Cross-Validation para validação mais robusta.
+
+3. **Tempo de treinamento**: Apenas 1 época para fins acadêmicos (para demonstrar o conceito).
 
 ## 💡 Possíveis Melhorias
 
+### Balanceamento de Classes
 - Implementar class weights para tratar o desequilíbrio de classes
+- Usar data augmentation para classes minoritárias (back-translation, synonym replacement)
+- Aplicar técnicas de oversampling (SMOTE) ou undersampling
+
+### Validação e Treinamento
+- Implementar K-Fold Cross-Validation para validação mais robusta
+- Utilizar StratifiedKFold para manter distribuição de classes em cada fold
 - Aumentar o número de épocas (5-10) para melhor convergência
-- Usar data augmentation para classes minoritárias
-- Experimentar com outros modelos (RoBERTa, DeBERTa)
 - Implementar early stopping para evitar overfitting
+
+### Modelos e Arquitetura
+- Experimentar com outros modelos (RoBERTa, DeBERTa, FinBERT)
+- Implementar ensemble de modelos
+- Adicionar mais camadas de fine-tuning (freezing gradual)
 
 ## 📚 Referências
 
