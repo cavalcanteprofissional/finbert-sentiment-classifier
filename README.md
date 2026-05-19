@@ -51,6 +51,7 @@ Demonstrar o processo completo de **Transfer Learning** com BERT para classifica
 ├── metricas_area_preenchida.png        # Gráfico: área preenchida por métrica
 ├── metricas_tabela_heatmap.png         # Gráfico: tabela com heatmap
 ├── metricas_dashboard_completo.png     # Dashboard completo
+├── Fine-tuning-BERT-para-Classificacao-de-Sentimento-Financeiro.pdf  # Apresentação PPT
 └── README.md                           # Este arquivo
 ```
 
@@ -63,6 +64,25 @@ Demonstrar o processo completo de **Transfer Learning** com BERT para classifica
 5. **Fine-tuning** - 1 época, batch 16, learning rate 2e-5
 6. **Avaliação** - Métricas antes e depois do treinamento
 7. **Exportação** - Gráficos comparativos
+
+## 📊 Apresentação do Projeto
+
+O projeto possui uma apresentação em PowerPoint (PDF) com todos os detalhes:
+
+📥 **[Baixar Apresentação PDF](./Fine-tuning-BERT-para-Classificacao-de-Sentimento-Financeiro.pdf)**
+
+A apresentação inclui:
+- Introdução e contextualização
+- Dataset utilizado e distribuição de classes
+- Arquitetura do modelo e configuração do fine-tuning
+- Pipeline completo de processamento
+- Análise do desequilíbrio de classes
+- Resultados: métricas antes e depois do fine-tuning
+- Gráficos comparativos de evolução
+- Matriz de confusão
+- Conclusões e limitações
+- Sugestões de melhorias futuras
+- Referências
 
 ## 📦 Dataset
 
